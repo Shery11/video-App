@@ -1,0 +1,34 @@
+
+<ion-header>
+
+ <ion-navbar color="primary">
+    <ion-title>Videos List</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+       Logout
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-list>
+  <ion-item-divider color="light">Videos</ion-item-divider>
+  <!-- <ion-item *ngFor="let video of videos| async">
+       <ion-label>{{video.title}} </ion-label>
+      
+  </ion-item> -->
+
+   <ion-item *ngFor="let video of videos| async">
+    {{video.title}} <button *ngIf="video.title" ion-button item-end (click)="editVideo(video)">Edit video
+    </button> <button *ngIf="video.title" ion-button round item-end color="danger" (click)="deleteVideo(video.key)">x</button>
+  </ion-item> 
+   
+  
+       
+</ion-list>
+
+</ion-content>

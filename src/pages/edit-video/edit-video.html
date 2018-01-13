@@ -1,12 +1,12 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>Add video Data</ion-title>
-    <ion-buttons end>
+    <ion-title>Edit video Data</ion-title>
+    <!-- <ion-buttons end>
       <button ion-button (click)="logout()">
        Logout
       </button>
-    </ion-buttons>
+    </ion-buttons> -->
   </ion-navbar>
 
 </ion-header>
@@ -25,7 +25,7 @@
  
             <ion-item>
                 <ion-label >Title</ion-label>
-                <ion-input type="text" #title></ion-input>
+                <ion-input type="text" name="title" [(ngModel)]="title"></ion-input>
             </ion-item>
  
            
@@ -46,9 +46,11 @@
             <ion-item-divider color="light">List of Scenes</ion-item-divider>
             
    
-			<ion-item *ngFor="let scene of scenes" >
+			<ion-item *ngFor="let scene of scenes;let i = index" >
 				<ion-icon item-end><button ion-button small color="primary" item-end (click)="openModal(scene)">Add Slide</button></ion-icon>
-				<ion-label>{{scene.text}} </ion-label>
+				<ion-icon item-end><button ion-button small color="danger" item-end (click)="deleteSlide(i)">Delete Scene</ button></ion-icon>
+        
+        <ion-label>{{scene.text}} </ion-label>
 				
 
 			</ion-item>

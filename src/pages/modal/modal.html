@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons start>
+      <button ion-button icon-only (click)="cancel()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Add slide</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding>
+
+   <ion-item>
+      <ion-label >Text</ion-label>
+      <ion-input type="text" name="text" [(ngModel)]="text"></ion-input>
+    </ion-item>
+
+  <button ion-button full icon-left (click)="takePicture('gallery')">
+     <ion-icon name="md-image"></ion-icon>
+  Select slide</button>
+
+  <ion-grid>
+   <ion-row>
+     <ion-col col-12>
+      <img [src]="base64Image" *ngIf="base64Image" />
+     </ion-col>
+   </ion-row>
+ </ion-grid>
+
+  <button ion-button full icon-left (click)="save()">
+    <ion-icon name="checkmark"></ion-icon> Save slide
+  </button>
+
+
+  <ion-list>
+
+  <ion-item-divider color="light">List of Previous slides</ion-item-divider>
+
+  <ion-item *ngFor="let slide of slides;let i = index" >
+       <button ion-button round item-end color="danger"  (click)="deleteImage(i)">x</button> 
+       <img [src]="slide.image" *ngIf="slide" />
+  </ion-item>
+
+ </ion-list>
+     
+    
+  
+  
+  
+</ion-content>
+
+
+<!-- TODO add edit functionality -->

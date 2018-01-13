@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Register
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      
+    </ion-col>
+    <ion-col xl>
+      <ion-avatar item-start>
+    <img src="assets/img/registration.png">
+    </ion-avatar>
+    </ion-col>
+    <ion-col>
+      
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  
+ <ion-list>
+
+  <ion-item>
+   <ion-avatar item-start>
+    <img src="assets/img/username.png">
+    </ion-avatar>
+    <ion-label floating>Email</ion-label>
+    <ion-input type="text" #username></ion-input>
+  </ion-item>
+
+  <ion-item>
+   <ion-avatar item-start>
+    <img src="assets/img/password.png">
+    </ion-avatar>
+    <ion-label floating>Password</ion-label>
+    <ion-input type="password" #password></ion-input>
+  </ion-item>
+</ion-list>
+<div padding>
+  <button color="secondary" ion-button full (click) = "register()">Register</button>
+</div>
+
+<div padding>
+  <button color="secondary" ion-button full (click) = "signIn()">Sign In</button>
+</div>
+</ion-content>

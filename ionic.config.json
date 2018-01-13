@@ -1,6 +1,8 @@
 {
   "name": "videoapp",
-  "app_id": "",
+  "app_id": "e60f9956",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
