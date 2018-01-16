@@ -11,7 +11,6 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-   
     <platform name="android">
         <preference name="loadUrlTimeoutValue" value="700000" />
         <preference name="webviewbounce" value="false" />
